@@ -16,16 +16,12 @@ function App() {
     setCartShown(false);
   };
 
-  const addToCartHandler = (event) => {
-    setAddToCart(event.target.value);
-  };
-
   return (
     <CartProvider>
       {cartShown && <Cart onHideCart={hideCartHandler} />}
       <Header onShowCart={showCartHandler} />
       <main>
-        <MealMainPage onAdd={addToCartHandler} />
+        <MealMainPage />
       </main>
     </CartProvider>
   );
